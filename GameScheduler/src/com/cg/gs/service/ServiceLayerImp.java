@@ -1,5 +1,7 @@
 package com.cg.gs.service;
 
+import java.util.List;
+
 import com.cg.gs.beans.Day;
 import com.cg.gs.beans.DaySummary;
 import com.cg.gs.beans.Game;
@@ -45,9 +47,18 @@ public class ServiceLayerImp implements ServiceLayer{
 		return dao.findDayInformation(name);
 	}
 	
+	@Override
+	public Game populateGames(String name) {
+		return dao.populateGames(name);
+	}
+	
+	@Override
+	public List<String> populateList(String input, int x){
+		return dao.populateList(input, x);
+	}
+	
 	public boolean validatePlayer(Player player) throws PlayerException{
-		
-			return true;
+		return true;
 	}
 	public boolean validateDay(Day day) throws DayException{
 		
@@ -57,5 +68,6 @@ public class ServiceLayerImp implements ServiceLayer{
 		
 		return true;
 	}
+	
 	
 }

@@ -1,5 +1,7 @@
 package com.cg.gs.service;
 
+import java.util.List;
+
 import com.cg.gs.beans.Day;
 import com.cg.gs.beans.DaySummary;
 import com.cg.gs.beans.Game;
@@ -20,4 +22,6 @@ public interface ServiceLayer {
 	public boolean validateGame(Game game) throws GameException;
 	public boolean validateDay(Day day) throws DayException;
 	public boolean validatePlayer(Player player) throws PlayerException;
+	public Game populateGames(String name);
+	public List<String> populateList(String input, int x);
 }

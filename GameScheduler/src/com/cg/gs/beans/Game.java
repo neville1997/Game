@@ -15,5 +15,5 @@ public class Game {
 		super();
 		this.name = name;
 	}
-	
+		
 }

@@ -5,12 +5,12 @@ import java.util.Map;
 
 public class PlayerSummary {
 	Player player;
-	Map<Game, List<Day>> playersummary;
+	Map<Game, List<Day>> playersum;
 	
-	public PlayerSummary(Player player, Map<Game, List<Day>> playersummary) {
+	public PlayerSummary(Player player, Map<Game, List<Day>> playersum) {
 		super();
 		this.player = player;
-		this.playersummary = playersummary;
+		this.playersum = playersum;
 	}
 	public Player getPlayer() {
 		return player;
@@ -19,10 +19,10 @@ public class PlayerSummary {
 		this.player = player;
 	}
 	public Map<Game, List<Day>> getPlayersummary() {
-		return playersummary;
+		return playersum;
 	}
-	public void setPlayersummary(Map<Game, List<Day>> playersummary) {
-		this.playersummary = playersummary;
+	public void setPlayersummary(Map<Game, List<Day>> playersum) {
+		this.playersum = playersum;
 	}
 	
 }

@@ -1,5 +1,7 @@
 package com.cg.gs.dao;
 
+import java.util.List;
+
 import com.cg.gs.beans.Day;
 import com.cg.gs.beans.DaySummary;
 import com.cg.gs.beans.Game;
@@ -17,4 +19,6 @@ public interface DAOLayer {
 //	public Game addGame(String name);
 //	public Player addPlayer(String name, List<Game> games);
 //	public Day addDay(String name, List<Game> games); 
+	public Game populateGames(String name);
+	public List<String> populateList(String input, int x);
 }

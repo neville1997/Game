@@ -1,6 +1,10 @@
 package com.cg.gs.dao;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+
 import com.cg.gs.beans.Day;
 import com.cg.gs.beans.DaySummary;
 import com.cg.gs.beans.Game;
@@ -15,13 +19,16 @@ public class DAOLayerImp implements DAOLayer{
 
 	@Override
 	public Player addPlayer(Player player) {
-		PlayerSummary ps = new PlayerSummary(player, null);
+		Map<Game, List<Day>> playersum = null;
+		PlayerSummary ps = new PlayerSummary(player, playersum);
 		psum.add(ps);
 		return player;
 	}
 
 	@Override
 	public Game addGame(Game game) {
+		List<String> players;
+		List<String> days;
 		GameSummary gs = new GameSummary(game, null, null);
 		gsum.add(gs);
 		return game;
@@ -29,8 +36,8 @@ public class DAOLayerImp implements DAOLayer{
 
 	@Override
 	public Day addDay(Day day) {
-		DaySummary ds = new DaySummary(day, null);
-		dsum.add(ds);
+//		DaySummary ds = new DaySummary(day, daysummary);
+//		dsum.add(ds);
 		return day;
 	}
 
@@ -50,6 +57,21 @@ public class DAOLayerImp implements DAOLayer{
 	public DaySummary findDayInformation(String name) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+	
+	@Override
+	public Game populateGames(String name) {
+		Game newgame = new Game(name);
+		return newgame;
+	}
+	
+	@Override
+	public List<String> populateList(String input, int x){
+		List<String> sample = new ArrayList<>();;
+		for(int i=0; i<x; i++) {
+			sample.add(input);
+		}
+		return sample;
 	}
 
 }

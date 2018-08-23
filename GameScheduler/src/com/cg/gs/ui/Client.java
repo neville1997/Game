@@ -2,7 +2,6 @@ package com.cg.gs.ui;
 
 import java.util.List;
 import java.util.Scanner;
-
 import com.cg.gs.beans.Game;
 import com.cg.gs.beans.Player;
 import com.cg.gs.service.ServiceLayer;
@@ -32,7 +31,8 @@ public class Client {
 		case 2:
 			System.out.println("Enter Game Name: ");
 			String name2 = sc.next();
-			Game game2 = new Game(name2);
+			Game game2 = ser.populateGames(name2);
+			ser.addGame(game2);
 			break;
 		case 3:
 			System.out.println("Enter Day: ");
